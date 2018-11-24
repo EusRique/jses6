@@ -12,6 +12,7 @@ yarn init </br>
 yarn add @babel/cli </br>
 yarn add @babel/preset-env </br>
 yarn add @babel/core </br>
+yarn add @babel/plugin-proposal-object-rest-spread </br>
 
 ### Configurar o Babel no projeto </br>
 Necessário criar um arquivo .babelrc </br>
