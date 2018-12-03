@@ -6,7 +6,7 @@
 Node.js </br>
 Yarn
 
-### Installar as dependências </br>
+### Installar as dependências (Ambiente DEV) </br>
 Na raiz do projeto </br>
 yarn init </br>
 yarn add @babel/cli </br>
@@ -28,10 +28,37 @@ No arquivo package.js criar uma nova propriedade chamada conforme abaixo para ge
 ```js
 {
   "scripts": {
-    "dev": "babel ./arquivo.js -o bundle.js -w"
+    "dev": "webpack --mode=development -w"
   }
 }
 ```
+
+### Configurando Webpack (Ambiente DEV) </br>
+yarn add webpack webpack-cli -D
+criar arquivo com nome webpack.config.js e configurar
+
+```js
+module.exports = {
+    entry: './main.js',
+    output: {
+        path: __dirname,
+        filename: 'bundle.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                }
+            }
+        ],
+    },
+}
+```
+yarn add babel-loader -D
+
 # Exercícios: Módulo 01
 
 ## 1º exercício
