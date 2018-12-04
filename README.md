@@ -28,7 +28,7 @@ No arquivo package.js criar uma nova propriedade chamada conforme abaixo para ge
 ```js
 {
   "scripts": {
-    "dev": "webpack --mode=development -w"
+    "dev": "webpack-dev-server --mode=development"
   }
 }
 ```
@@ -39,10 +39,13 @@ criar arquivo com nome webpack.config.js e configurar
 
 ```js
 module.exports = {
-    entry: './main.js',
+    entry: './src/main.js',
     output: {
-        path: __dirname,
-        filename: 'bundle.js'
+        path: __dirname + '/public',
+        filename: 'bundle.js',
+    },
+    devServer: {
+        contentBase: __dirname + '/public',
     },
     module: {
         rules: [
@@ -55,9 +58,19 @@ module.exports = {
             }
         ],
     },
-}
+};
 ```
 yarn add babel-loader -D
+yarn add webpack-dev-server -D
+
+### Ambiente de Produção </br>
+Ir no arquivo package.json  e criar o seguint comando
+```js
+"scripts": {
+    "build": "webpack --mode=production"
+  }
+```
+yarn build
 
 # Exercícios: Módulo 01
 
