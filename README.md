@@ -1,4 +1,4 @@
-# Javascript com ES6+
+# Aplicação básica Javascript com ES6+
 
 ## Configurações
 
