@@ -1,6 +1,8 @@
 # Aplicação básica Javascript com ES6+
 
-## Configurações
+## Comunicação com API do Git
+
+### Configurações
 
 ### Instalar </br>
 Node.js </br>
